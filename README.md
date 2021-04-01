@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @rkartau
+- 👀 I’m interested in data analysis and visualization
+- 🌱 I’m currently learning How to make the analyses better with AI
+- 💞️ I’m looking to collaborate with projects what make me better in my respective fields
+- 📫 Rkartau (@) hotmail (.) com
