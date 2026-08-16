@@ -8,8 +8,8 @@
 
 Before sources: the target number needs adjusting, because the market is smaller than that — and that's good news, not bad.
 
-- There are roughly **10,000–15,000 ship agency companies** worldwide (FONASBA's national associations cover most of the organized market). *(Refined in §2.)*
-- There are roughly **~25,000–50,000 registered shipowner/manager companies**, but a much smaller core of active commercial operators. S&P's Sea-web claims ~240,000 maritime company records total across *all* company types — agents, owners, managers, suppliers, everyone. *(Refined in §3.)*
+- There are roughly **5,000–10,000 addressable ship agency companies** worldwide (FONASBA's national associations cover most of the organized market). *(Detail in §2.)*
+- Registered-owner records number in the hundreds of thousands, but those are mostly one-ship SPV shells; they collapse to an estimated **10,000–25,000 distinct commercial owner groups**, and far fewer ship-management (DOC) companies. S&P's Sea-web claims ~240,000 maritime company records total across *all* company types — agents, owners, managers, suppliers, everyone. *(Detail in §3.)*
 - A "100k valid personal emails" list can only be built by scraping/buying junk data. It would be mostly invalid (destroying your sender domain within days), and mass-harvesting named individuals' emails violates GDPR for an Estonian-based sender and gets outreach domains blacklisted.
 
 **The realistic, better target:** ~15k–40k *companies* as the account universe, and **licensed, verified contacts for the top few thousand accounts you can actually work** — segmented by country so every send is legal. A tight base of 5,000 valid, role-relevant contacts will outperform 100,000 scraped addresses on every metric that matters (deliverability, reply rate, and not getting fined).
@@ -40,7 +40,32 @@ Note: **Wilhelmsen (~2,200 port locations) and GAC (300+ offices)** are the two 
 
 ## 3. Shipowners and ship managers — where the data lives
 
-*(Section pending — being researched.)*
+**Fleet denominator (UNCTAD 2025): ~112,500 vessels ≥100 GT, of which ~60,300 over 1,000 GT.** Registered owners are heavily one-ship SPVs, so the ~290k "owner" records in commercial databases collapse to an estimated **10,000–25,000 distinct commercial owner groups**, and distinct ship managers (DOC companies) are fewer still — with only ~200+ third-party managers running ~10,000 vessels. A port-call SaaS targeting managers with ≥5 ships is realistically **a few thousand accounts worldwide**.
+
+### Free sources (lookup and qualification — NOT bulk extraction)
+
+| Source | What you get | Constraint |
+|---|---|---|
+| **Equasis** (equasis.org) | Per-ship: Registered Owner, Ship Manager, ISM/DOC company, flag, class, PSC history. 85k–100k+ ships. Free with registration | **ToU explicitly forbid bulk download/harvesting and commercial reuse.** Use for manual per-account enrichment only — scraping it for a pipeline would violate its terms |
+| **IMO GISIS** (gisis.imo.org/public/ships) | Ship + company records by IMO ship/company number | Name/address-level only, no personal contacts, no API/bulk export |
+| **Class registers** — DNV Vessel Register, ABS Record | Free per-vessel lookups incl. owner | Per-vessel only, no bulk |
+| **Alphaliner TOP 100** (free) | The definitive ranked list of ~250 liner/container operators | Container segment only |
+| **TrustedDocks** (trusteddocks.com/ship-owner) | Free directory claiming 51,880 shipowners in 206 countries | Self-reported, quality unverified — use as seed list, verify everything |
+| **Equasis annual "World Merchant Fleet" statistics PDF** | Authoritative owner/manager company counts by segment | Download the report tables to replace estimates with hard numbers |
+
+### Paid sources (the account universe)
+
+| Source | Coverage | Price signal | Verdict |
+|---|---|---|---|
+| **S&P Global Sea-web** (Companies + Directory) | 240k+ marine company records, 129k+ ship operators; issuer of IMO company numbers; Directory descends from the World Shipping Directory contact reference | Unpublished, enterprise (est. five figures/yr); API | **The canonical owner/manager universe** — best single buy |
+| **VesselsValue** (Veson) | 76k+ vessels, 8 ownership tiers per ship (UBO → ISM manager), "with contact details" (company-level) | **From £500/month** — cheapest verified entry; API feeds | Best mid-price option |
+| **Lloyd's List Intelligence / Seasearcher** | Ownership structures/UBO, compliance; 620k+ vessels | **£15,100/yr** (verified via UK gov contract, 2023); APIs | Strongest for ownership structures; contact-person module unconfirmed — ask sales |
+| **Clarksons SIN / World Fleet Register** | Full fleet + orderbook, market analytics | Unpublished; API portal | Analytics-first; overkill for lead-gen alone |
+| **MarineTraffic (Kpler)** | Ownership enrichment on 220k+ IMO vessels + port calls | Enterprise-only since Kpler acquisition | Best for *port-call context* (very relevant to Docka) more than contacts |
+| **BIMCO membership** | ~2,100–2,550 member companies (owners ≈65% of world tonnage); directory member-only | Membership fee | A legitimate curated owner community, not a data product |
+| **ShipServ** | Only ~260 shipowners/managers as buyers (73k *suppliers*) | Freemium | Wrong shape for owner leads; useful as a "digitally mature owners" named-account list |
+
+**Key fact:** none of the ship registries carries decision-maker emails. Named persons + emails only come from the licensed contact providers in §4, layered on top of this company universe.
 
 ---
 
@@ -95,4 +120,14 @@ Greece being opt-in matters: it's the largest shipowning nation. Plan for **Posi
 
 ---
 
-*Sections 2–3 source tables and the full source list are appended below.*
+## 7. What NOT to do (and why it would backfire)
+
+- **Don't scrape Equasis or GISIS in bulk** — Equasis's terms explicitly forbid harvesting and commercial reuse; the underlying data belongs to S&P and can't feed a commercial product.
+- **Don't scrape LinkedIn** — ToS breach, account bans, and it torpedoes the Sales Navigator investment.
+- **Don't buy static maritime CSV email lists** — unverifiable provenance, GDPR exposure, and bounce rates that will blacklist your sending domain in days.
+- **Don't cold-email opt-in countries** (Germany, Denmark, Italy, Spain, Poland, Greece, and others in §5) — in Germany competitors can even sue over a single unsolicited B2B email.
+- **Don't chase 100k contacts** — the entire addressable market is smaller than that. Validity, segmentation, and legality per contact are what convert; volume without them just burns domains and creates legal risk.
+
+---
+
+*Compiled from three parallel research passes (agency directories, owner/manager registries, contact providers + compliance). Coverage numbers marked as estimates were triangulated, not cited; primary sources for hard numbers: FONASBA membership list, Equasis World Merchant Fleet statistics reports, UNCTAD Review of Maritime Transport 2025, S&P Sea-web product pages, and vendor pricing pages.*
