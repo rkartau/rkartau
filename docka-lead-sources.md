@@ -130,4 +130,14 @@ Greece being opt-in matters: it's the largest shipowning nation. Plan for **Posi
 
 ---
 
+## 8. Seed account list (CSV in this repo)
+
+**`docka-seed-accounts.csv`** — 277 companies across 53 countries, collected by 9 web-search agents and audited row-by-row by two independent subagents (Pass A: existence/identity; Pass B: website/contact validity).
+
+- Segments: 157 ship agencies, 35 agency networks, 35 shipowners/operators (incl. Baltic ferry/ro-ro), 27 liner operators, 23 third-party ship managers.
+- Status column: `verified` (41 — both auditors confirmed), `needs_review` (235 — evidence found but at least one detail unconfirmed; per-row reasons included), `rejected` (1 — country mismatch, kept for the audit trail).
+- Emails are nearly all blank **by design**: collectors were forbidden to guess addresses, and company sites were unreachable from this environment (network egress blocked). Websites (215 rows) and source URLs are populated. Fill the contact layer via licensed providers (§4) or a local-machine harvest of the association directories (§2).
+
+---
+
 *Compiled from three parallel research passes (agency directories, owner/manager registries, contact providers + compliance). Coverage numbers marked as estimates were triangulated, not cited; primary sources for hard numbers: FONASBA membership list, Equasis World Merchant Fleet statistics reports, UNCTAD Review of Maritime Transport 2025, S&P Sea-web product pages, and vendor pricing pages.*
