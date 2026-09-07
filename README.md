@@ -9,7 +9,7 @@ I'm honest about my lane: I'm a product person who builds, not a career software
 - 📊 **Data analysis & visualization** - mostly Python, some Java. Turning messy data into something you can actually decide with.
 - 🛠️ **Things I've built:**
   - https://docka.me/ - Docka is an automated primary source verification (PSV) platform for maritime credentials. It checks certificates live against the official flag-state registries listed above and hands back a timestamped, shareable verdict — no registry-hopping, no email chains, no trusting a PDF.
-  - Https://www.bebo.ee - a non-profit price-comparison platform. Started as brittle per-shop scrapers, grew into something smarter.
+  - https://www.bebo.ee - a non-profit price-comparison platform. Started as brittle per-shop scrapers, grew into something smarter.
   - https://www.scrapewise.ai- a universal AI scraper (LLM-based extraction from messy HTML) plus a product-matching model using text and image embeddings.
 
 #### Right now
